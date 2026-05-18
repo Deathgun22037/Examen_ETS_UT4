@@ -2,17 +2,17 @@ import java.util.Scanner;
 
 public class Mainrecu {
     public static void main(String[] args) {
-        Scanner t = new Scanner(System.in);
-        int nd, a, m, d;
+        Scanner teclado = new Scanner(System.in);
+        int numeroDias, años, meses, dias;
         do {
             System.out.println("Introduce el número de días a convertir (valores mayores de 0)");
-            nd = t.nextInt();
-        } while (nd <= 0);
-        a = (int) nd / 365;
-        m = (int) (nd % 365) / 30;
-        d = (nd % 365) % 30;
-        System.out.println("El " + nd + " corresponde a " + a + " a " + m + " m " + d + " d.");
+            numeroDias = teclado.nextInt();
+        } while (numeroDias <= 0);
+        años = (int) numeroDias / 365;
+        meses = (int) (numeroDias % 365) / 30;
+        dias = (numeroDias % 365) % 30;
+        System.out.println("El " + numeroDias + " corresponde a " + años + " a " + meses + " m " + dias + " d.");
         System.out.println("Gracias por utilizar mi programa");
-        t.close();
+        teclado.close();
     }
 }
