@@ -5,6 +5,11 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
+    /**
+     * Clase Main que insertas datos para formar esfera, esta se guarda en una lista para posteriormente con un menu poder tener todos los datos, a su vez tienen funcion de
+     * orden para ver la esfera mayor, con metodos que controlan la inserccion de datos.
+     * @param args
+     */
     public static void main(String[] args) {
         ArrayList <Esfera> listaEsferas = new ArrayList<>();
         Scanner tec = new Scanner(System.in);
@@ -13,7 +18,6 @@ public class Main {
         double pi = Math.PI;
 
         do {
-
             System.out.println("Escoja una opcion");
             System.out.println("1. Añadir esfera");
             System.out.println("2. Ver lista de volumen y area de esferas");
@@ -73,6 +77,12 @@ public class Main {
 
     }
 
+    /**
+     * Metodo que se asegura de insertar un double correcto.
+     * @param tec
+     * @return
+     */
+
     public static double pedirNumDouble(Scanner tec) {
         double numero = 0;
         boolean valido = false;
@@ -93,6 +103,12 @@ public class Main {
         }
         return numero;
     }
+
+    /**
+     * Metodo que se asegura de insertar un int correcto.
+     * @param tec
+     * @return
+     */
 
     public static int pedirNum(Scanner tec) {
         int numero = 0;
