@@ -114,8 +114,4 @@ public class Main {
         }
         return numero;
     }
-
-    public void ordenarEsfera(ArrayList listaEsferas) {
-        Collections.sort(listaEsferas, Collections.reverseOrder());
-    }
 }
