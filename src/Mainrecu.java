@@ -3,16 +3,34 @@ import java.util.Scanner;
 public class Mainrecu {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        int numeroDias, años, meses, dias;
-        do {
-            System.out.println("Introduce el número de días a convertir (valores mayores de 0)");
-            numeroDias = teclado.nextInt();
-        } while (numeroDias <= 0);
-        años = (int) numeroDias / 365;
-        meses = (int) (numeroDias % 365) / 30;
-        dias = (numeroDias % 365) % 30;
-        System.out.println("El " + numeroDias + " corresponde a " + años + " a " + meses + " m " + dias + " d.");
-        System.out.println("Gracias por utilizar mi programa");
+        int numeroDias;
+        numeroDias = introducirNumero(teclado);
+        imprimirMensaje(conversorDias(numeroDias));
+        imprimirMensaje("Gracias por utilizar mi programa");
         teclado.close();
+    }
+
+    public static String conversorDias (int numeroDias) {
+        int años = numeroDias/365;
+        int meses = (numeroDias % 365) / 30;
+        int dias = (numeroDias % 365) % 30;
+
+        String mensaje = "El "+ numeroDias + " corresponde a " + años + " a " + meses + " m " + dias + " d.";
+        return mensaje;
+    }
+
+    public static int introducirNumero (Scanner teclado) {
+        int num = 0;
+
+        do {
+            System.out.println("Introduce el numero de dias a convertir (valores mayoes de 0)");
+            num = teclado.nextInt();
+        }while (num <= 0);
+
+        return num;
+    }
+
+    public static void imprimirMensaje (String mensaje) {
+        System.out.println(mensaje);
     }
 }
