@@ -1,24 +1,14 @@
 package Esfera;
 
 public class Esfera {
-    private double area;
     private double radio;
     final double pi = Math.PI;
 
     public Esfera() {
     }
 
-    public Esfera(double area, double radio) {
-        this.area = area;
+    public Esfera(double radio) {
         this.radio = radio;
-    }
-
-    public double getArea() {
-        return area;
-    }
-
-    public void setArea(double area) {
-        this.area = area;
     }
 
     public double getRadio() {
@@ -41,5 +31,12 @@ public class Esfera {
 
         volumen = (4*pi*radio*radio*radio)/3;
         return volumen;
+    }
+
+    @Override
+    public String toString() {
+        return "Esfera{" +
+                "radio=" + radio +
+                '}';
     }
 }
